@@ -28,4 +28,4 @@ for link in links:
 
 connection.commit()
 
-print(f'DONE AFTER {int(time()-init_ts)}s')
+print(f'DONE AFTER {time()-init_ts}s')
