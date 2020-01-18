@@ -10,7 +10,7 @@ init_ts = time()
 
 links = list(filter(lambda x: bool(x), [
     a.get('href', False) for a in 
-    BS(requests.get(f'https://{sys.argv[1]}').text).find_all('a')
+    BS(requests.get(f'http://{sys.argv[1]}').text, features='html.parser').find_all('a')
 ]))
 
 with open('links.txt', 'w+') as fh:
